@@ -1,7 +1,21 @@
+<% javascript_pack_tag 'postsNew' %>
+
 <%= form_for Post.new, url: "/posts" do |form| %>
-  <%= form.file_field :image, name: "image", class: "image-upload" %><br>
-  <%= form.text_field :caption, name: "caption", placeholder: "Caption", class: "caption-field" %><br>
-  <%= form.submit "Create Post", class: "submit" %>
+  <%= form.file_field :image, name: "image", accept: "image/*", class: "form-control form-control-lg", id: "formFileLg", onchange: "loadFile(event)" %><br>
+  <%= form.text_field :caption, name: "caption", placeholder: "Caption", class: "form-control" %><br>
+  <%= form.submit "Create Post", class: "submit", id: "submit" %>
 <% end %>
 
+<img id="preview"/>
+
 <%= notice %>
+
+<script>
+  var loadFile = function(event) {
+    var preview = document.getElementById('preview');
+    preview.src = URL.createObjectURL(event.target.files[0]);
+    preview.onload = function() {
+      URL.revokeObjectURL(preview.src)
+    }
+  };
+</script>

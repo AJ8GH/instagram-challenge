@@ -16,8 +16,6 @@
 
 * {
   text-align: center;
-  font-family: Arial;
-  background-color: rgb(225, 225, 225);
   box-sizing: border-box;
 }
 
@@ -89,7 +87,7 @@ h1 {
   text-align: justify;
 }
 
-ul {
+/* ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -110,10 +108,10 @@ li a {
   background-color: #333;
 }
 
-/* Change the link color to #111 (black) on hover */
+Change the link color to #111 (black) on hover
 li a:hover {
   background-color: #111;
-}
+} */
 
 .button {
   padding: 20px;
@@ -127,14 +125,14 @@ li a:hover {
   color: white;
 }
 
-input {
+/* input {
   background-color: white;
   color: #333;
   padding: 5px;
   font-size: 20px;
   border-radius: 0px;
   width: 250px;
-}
+} */
 
 .submit {
   background-color: #333;

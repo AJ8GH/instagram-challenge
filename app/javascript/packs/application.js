@@ -11,7 +11,3 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-
-document.querySelector('#like-btn').addEventListener('click', (event) => {
-  event.preventDefault();
-})
