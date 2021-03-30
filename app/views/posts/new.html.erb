@@ -1,12 +1,13 @@
 <% javascript_pack_tag 'postsNew' %>
 
+<img id="preview" class="preview"/><br>
+
 <%= form_for Post.new, url: "/posts" do |form| %>
   <%= form.file_field :image, name: "image", accept: "image/*", class: "form-control form-control-lg", id: "formFileLg", onchange: "loadFile(event)" %><br>
-  <%= form.text_field :caption, name: "caption", placeholder: "Caption", class: "form-control" %><br>
+  <%= form.text_area :caption, name: "caption", placeholder: "Caption", rows: "5", class: "form-control" %><br>
   <%= form.submit "Create Post", class: "submit", id: "submit" %>
 <% end %>
 
-<img id="preview"/>
 
 <%= notice %>
 
